@@ -1,0 +1,112 @@
+body {
+padding-top: 50px;
+font-family: Georgia;
+background: #FFFFFF;
+}
+
+.navbar {
+	background: black;
+}
+
+a.navbar-brand {
+	padding: 5px 25px;
+}
+
+#navbar-logo {
+	height: 40px;
+}
+
+.navbar-default {
+	border-color: black;
+}
+.navbar-default .navbar-nav>li>a {
+	color: white;
+	border-bottom: 5px solid black;
+	padding-bottom: 10px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	border-bottom-color: #FFC801;
+	color: white;
+}
+
+.navbar-default .navbar-nav>.active>a {
+	background: black;
+	border-bottom-color: #FFC801;
+	color: white;
+}
+
+
+.navbar-default .navbar-nav>.active>a:hover {
+	border-bottom-color: #FFC801;
+	color: white;
+	background: black;
+}
+
+.home-head {
+	background: url("bg.jpg");	
+	text-align: center;
+	color: white;
+	height: 15em;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#home-header {
+	margin-top: 5em;
+	text-transform: uppercase;
+}
+
+#home-header h1 {
+	font-family: Georgia;
+	font-size: 1.5em;
+	margin: 0em;
+}
+
+#home-header p {
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+
+.home-info {
+	padding: 1em 2em;
+		color: #717171;
+
+}
+
+.home-info h1 {
+}
+
+.home-info p {
+	margin-top: 1em;
+	line-height: 20px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+  	a.navbar-brand {
+	padding: 5px 5px;
+}
+  }
+
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+  	#home-header h1 {
+  		font-size: 2.5em;
+  	}
+  }
+
+  @media screen 
+  and (min-device-width: 1025px) 
+  and (max-device-width: 1600px) { 
+  	#home-header {
+  		width: 75%;
+  		margin: 0 auto;
+  		padding-top: 3em;
+  	}
+  	#home-header h1 {
+  		font-size: 3.5em;
+  	}
+}
