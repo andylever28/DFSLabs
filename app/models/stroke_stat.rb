@@ -1,3 +1,3 @@
 class StrokeStat < ApplicationRecord
-  belongs_to :player
+  belongs_to :player, optional: true
 end
