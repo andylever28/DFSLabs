@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  draft_kings_salary: 1
+  dfs_rating: 1
+  player: one
+
+two:
+  draft_kings_salary: 1
+  dfs_rating: 1
+  player: two
