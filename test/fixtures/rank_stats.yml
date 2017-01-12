@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pga_rank: 1
+  avg_score_last_30: 1
+  avg_score_last_year: 1
+  top_ten: 1
+  vegas_odds: 1
+  missed_cut: 1
+  player: one
+
+two:
+  pga_rank: 1
+  avg_score_last_30: 1
+  avg_score_last_year: 1
+  top_ten: 1
+  vegas_odds: 1
+  missed_cut: 1
+  player: two
