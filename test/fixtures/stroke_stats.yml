@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  putts_per_round: 1
+  gir: 1
+  drive_distance: 1
+  drive_accuracy: 1
+  scramble_percentage: 1
+  player: one
+
+two:
+  putts_per_round: 1
+  gir: 1
+  drive_distance: 1
+  drive_accuracy: 1
+  scramble_percentage: 1
+  player: two
