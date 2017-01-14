@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112202707) do
+ActiveRecord::Schema.define(version: 20170114195008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 20170112202707) do
   create_table "rank_stats", force: :cascade do |t|
     t.integer  "pga_rank"
     t.integer  "avg_score_last_30"
-    t.integer  "avg_score_last_year"
+    t.float    "avg_score_last_year"
     t.integer  "top_ten"
     t.integer  "vegas_odds"
-    t.integer  "missed_cut"
+    t.float    "missed_cut"
     t.integer  "player_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 20170112202707) do
   end
 
   create_table "stroke_stats", force: :cascade do |t|
-    t.integer  "putts_per_round"
-    t.integer  "gir"
-    t.integer  "drive_distance"
-    t.integer  "drive_accuracy"
-    t.integer  "scramble_percentage"
+    t.float    "putts_per_round"
+    t.float    "gir"
+    t.float    "drive_distance"
+    t.float    "drive_accuracy"
+    t.float    "scramble_percentage"
     t.integer  "player_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
