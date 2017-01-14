@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 	
   get 'pga/home'
   get 'pga/update'
+  get 'pga/index'
 
   get 'nfl/home'
 
