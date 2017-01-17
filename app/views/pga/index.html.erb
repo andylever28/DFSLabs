@@ -4,9 +4,9 @@
 		<th> DK Salary</th>
 		<th> DFS Rating</th>
 		<th> PGA Rank</th>
+		<th> Events Played </th>
 		<th> Avg Score(2017)</th>
 		<th> Top Ten</th>
-		<th> Vegas</th>
 		<th> Missed Cut %</th>
 		<th> Putts Per Round</th>
 		<th> GIR</th>
@@ -15,20 +15,22 @@
 		<th> Scramble Percent</th>
 	</tr>
 	<% @players.each do |player| %>
-		<tr> 
-		<td> <%= player.name %> </td>
-		<td> <%= player.dfs_stat.draft_kings_salary %> </td>
-		<td> <%= player.dfs_stat.dfs_rating %> </td>
-		<td> <%= player.rank_stat.pga_rank %> </td>
-		<td> <%= player.rank_stat.avg_score_last_year %> </td>
-		<td> <%= player.rank_stat.top_ten %> </td>
-		<td> <%= player.rank_stat.vegas_odds %> </td>
-		<td> <%= player.rank_stat.missed_cut %> </td>
-		<td> <%= player.stroke_stat.putts_per_round %> </td>
-		<td> <%= player.stroke_stat.gir %> </td>
-		<td> <%= player.stroke_stat.drive_distance %> </td>
-		<td> <%= player.stroke_stat.drive_accuracy %> </td>
-		<td> <%= player.stroke_stat.scramble_percentage %> </td>
-		</tr>
+		<% if player.rank_stat.events_played != 0 %>
+			<tr> 
+				<td> <%= player.name %> </td>
+				<td> <%= player.dfs_stat.draft_kings_salary %> </td>
+				<td> <%= player.dfs_stat.dfs_rating %> </td>
+				<td> <%= player.rank_stat.pga_rank %> </td>
+				<td> <%= player.rank_stat.events_played %> </td>
+				<td> <%= player.rank_stat.avg_score_last_year %> </td>
+				<td> <%= player.rank_stat.top_ten %> </td>
+				<td> <%= player.rank_stat.missed_cut %> </td>
+				<td> <%= player.stroke_stat.putts_per_round %> </td>
+				<td> <%= player.stroke_stat.gir %> </td>
+				<td> <%= player.stroke_stat.drive_distance %> </td>
+				<td> <%= player.stroke_stat.drive_accuracy %> </td>
+				<td> <%= player.stroke_stat.scramble_percentage %> </td>
+			</tr> 
+			<% end %>
 		<% end %> 
 	</table>
