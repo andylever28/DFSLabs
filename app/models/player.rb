@@ -20,5 +20,9 @@ class Player < ApplicationRecord
 			play.stroke_stat.update(putts_per_round: stat["putt_avg"].to_f.round(3), drive_distance: stat["drive_avg"].to_f.round(2), drive_accuracy: stat["drive_acc"].to_f.round(2), scramble_percentage: stat["scrambling_pct"].to_f.round(2), gir: stat["gir_pct"].to_f.round(2))
 			play.save
 		end 
+
+	def self.salary_update
+		
+	end 	
 	end
 end

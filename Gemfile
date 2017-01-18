@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'hirb'
 gem 'json'
+gem 'spreadsheet'
 gem 'httparty'
 gem 'nokogiri'
 # Use jquery as the JavaScript library
