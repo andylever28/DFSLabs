@@ -10,4 +10,8 @@ class PgaController < ApplicationController
   def update
   		Player.api_call
   end 
+
+  def salary
+  	Player.salary_update
+  end 
 end

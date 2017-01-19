@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'pga/home'
   get 'pga/update'
   get 'pga/index'
+  get 'pga/salary'
 
   get 'nfl/home'
 

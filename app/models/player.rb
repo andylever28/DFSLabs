@@ -1,4 +1,5 @@
 class Player < ApplicationRecord
+	require 'csv'
 	has_one :dfs_stat
 	has_one :rank_stat
 	has_one :stroke_stat
@@ -20,9 +21,14 @@ class Player < ApplicationRecord
 			play.stroke_stat.update(putts_per_round: stat["putt_avg"].to_f.round(3), drive_distance: stat["drive_avg"].to_f.round(2), drive_accuracy: stat["drive_acc"].to_f.round(2), scramble_percentage: stat["scrambling_pct"].to_f.round(2), gir: stat["gir_pct"].to_f.round(2))
 			play.save
 		end 
+	end 
 
 	def self.salary_update
-		
+		CSV.foreach('dksalary.csv', :headers => true) do |row|
+			if Player.find_by(name: row[1]) 
+				player = Player.find_by(name: row[1])
+				player.dfs_stat.update(draft_kings_salary: row[2])
+			end
+			end 
 	end 	
-	end
 end
