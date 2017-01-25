@@ -11,7 +11,8 @@ class PgaController < ApplicationController
   		Player.api_call
   end 
 
-  def salary
-  	Player.salary_update
+  def tournament
+    @counter = 1
+    @tournament = Tournament.last 
   end 
 end

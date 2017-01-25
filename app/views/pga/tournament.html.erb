@@ -1,0 +1,16 @@
+<table class="table table-bordered"> 
+<tr> 
+<td> Player </td>
+<td> Salary </td>
+<td> Tournament </td>
+</tr>
+<% @tournament.players.each do |player| %> 
+<tr>
+<td> <%= player.name %> </td>
+<td> <%= player.dfs_stat.draft_kings_salary %> </td>
+<td> <%= player.tournaments.last.name %> </td>
+<td> <%= @counter %> </td>
+</tr>
+	<% @counter += 1 %> 
+<% end %>
+</table>

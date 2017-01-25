@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'pga/home'
   get 'pga/update'
   get 'pga/index'
+  get 'pga/tournament'
   get 'pga/salary'
 
   get 'nfl/home'
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
   root 'main#home'
   get 'main/home'
 
+  resources :tournaments  
 end

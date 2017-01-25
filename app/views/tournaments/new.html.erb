@@ -1,0 +1,7 @@
+<%= form_for(@tournament, html: { multipart: true }) do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+<%= file_field_tag 'tournamentCSV' %>
+  <%= f.submit %>
+<% end %>
