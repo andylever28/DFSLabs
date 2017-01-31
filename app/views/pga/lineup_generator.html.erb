@@ -1,0 +1,51 @@
+<div class="container-fluid"> 
+	<div class="row"> 
+		<div class="col-xs-12">
+			<h1 id="lineup_title"> Lineup Generator </h1>
+		</div>
+		<div class="col-md-6">
+		<table class="table table-bordered"> 
+		<tr>
+			<th>Player</th>
+			<th> DK Salary</th>
+			<th> DFS Rating</th>
+			</tr>
+			<% @players.each do |player| %>
+			<tr> 
+				<td> <%= player.name %> </td>
+				<td> <%= player.dfs_stat.draft_kings_salary %> </td>
+				<td> <%= player.dfs_stat.dfs_rating %> </td>
+			</tr>
+		<% end %>
+		</table>
+		</div>
+		<div class="col-md-6">
+				<table class="table table-bordered"> 
+				<tr> 
+					<th> Lineup </th>
+					<th> Salary Cap: <%= @lineup.salary_cap %> </th>
+					<th> Remaining Salary: <%= @lineup.salary_cap  %> </th>
+				</tr>
+				<tr> 
+					<td colspan="3"> Player Slot </td>
+				</tr>
+				<tr> 
+					<td colspan="3"> Player Slot </td>
+				</tr>
+				<tr> 
+					<td colspan="3">Player Slot </td>
+				</tr>
+				<tr> 
+					<td colspan="3">Player Slot </td>
+				</tr>
+				<tr> 
+					<td colspan="3">Player Slot </td>
+				</tr>
+				<tr> 
+					<td colspan="3">Player Slot </td>
+				</tr>
+
+				</table>
+		</div>
+	</div>
+</div>
