@@ -4,6 +4,6 @@ class CreatePlayersTournamentsJoinTable < ActiveRecord::Migration[5.0]
   end
 
   def self.down 
-  	remove_join_table :players, :tournaments 
+  	drop_join_table :players, :tournaments 
   end 
 end

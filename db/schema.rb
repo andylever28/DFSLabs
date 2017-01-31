@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170124190126) do
+ActiveRecord::Schema.define(version: 20170131202458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,25 @@ ActiveRecord::Schema.define(version: 20170124190126) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["player_id"], name: "index_dfs_stats_on_player_id", using: :btree
+  end
+
+  create_table "lineups", force: :cascade do |t|
+    t.integer  "salary_cap"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "player_id"
+    t.index ["player_id"], name: "index_lineups_on_player_id", using: :btree
+  end
+
+  create_table "pga_lineups", force: :cascade do |t|
+    t.integer  "salary_cap"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pga_lineups_players", id: false, force: :cascade do |t|
+    t.integer "player_id",     null: false
+    t.integer "pga_lineup_id", null: false
   end
 
   create_table "players", force: :cascade do |t|
@@ -68,6 +87,7 @@ ActiveRecord::Schema.define(version: 20170124190126) do
   end
 
   add_foreign_key "dfs_stats", "players"
+  add_foreign_key "lineups", "players"
   add_foreign_key "rank_stats", "players"
   add_foreign_key "stroke_stats", "players"
 end

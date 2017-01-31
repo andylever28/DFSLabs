@@ -4,6 +4,7 @@ class Player < ApplicationRecord
 	has_one :rank_stat
 	has_one :stroke_stat
 	has_and_belongs_to_many :tournaments
+	has_and_belongs_to_many :pga_lineups
 	accepts_nested_attributes_for :dfs_stat, :rank_stat, :stroke_stat
 
 
